@@ -1,0 +1,100 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pic-ctn {
+    width: 50vw;
+    height: 600px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn {
+    position: relative;
+    width: 200vw;
+    height: 600px;
+    margin-top: 15vh;
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+
+
+  article {
+    background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 10vmin;
+    line-height: 1.1;
+  }
+  
+  body {
+    background: hsl(204 100% 5%);
+  
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui;
+    font-size: min(200%, 5vmin);
+  }
+  
+  h1,
+  body {
+    margin: 0;
+  }
+  
+  a {
+    font-family: "Dank Mono", ui-monospace, monospace;
+  }
+  
+  html {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  
